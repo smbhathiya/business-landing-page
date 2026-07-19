@@ -13,7 +13,7 @@ const contactInfo = [
 
 const inputCls = [
   'w-full px-4 py-3 rounded-xl text-gray-900 dark:text-white text-sm placeholder-gray-400',
-  'bg-background/70 border border-gray-200 dark:border-gray-800',
+  'bg-white/70 dark:bg-black/70 border border-gray-200 dark:border-gray-800',
   'focus:outline-none focus:border-red-600 focus:bg-background',
   'transition-all duration-200',
 ].join(' ');
@@ -165,7 +165,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="glass-strong rounded-2xl p-7 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-black/20 pointer-events-none rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-900/5 to-transparent dark:from-red-900/20 dark:to-transparent pointer-events-none rounded-2xl" />
               <div className="relative z-10">
                 <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Free Consultation</h4>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mb-5 leading-relaxed">

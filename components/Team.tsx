@@ -82,7 +82,7 @@ const Team = () => {
               className="glass-card rounded-2xl p-7 text-center transition-all duration-300 transform-gpu"
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${member.gradient} rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg`}>
-                <span className="text-2xl font-bold text-gray-900 dark:text-white">{member.name.charAt(0)}</span>
+                <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
               </div>
 
               <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{member.name}</h3>
@@ -119,7 +119,7 @@ const Team = () => {
           className="mt-16"
         >
           <div className="glass-strong rounded-2xl p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-black/20 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 to-transparent dark:from-red-900/20 dark:to-transparent pointer-events-none" />
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Work with Our Team?</h3>
               <p className="text-lg mb-8 text-gray-500 dark:text-gray-400">

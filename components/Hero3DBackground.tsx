@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Environment, Float, MeshDistortMaterial, ContactShadows } from '@react-three/drei';
+import { Environment, Float, ContactShadows } from '@react-three/drei';
 import { Suspense, useRef } from 'react';
 import * as THREE from 'three';
 
@@ -19,13 +19,11 @@ const FloatingShapes = () => {
     <group ref={group}>
       <Float speed={1.5} rotationIntensity={1.5} floatIntensity={2}>
         <mesh position={[2, 1, 0]} scale={1.2}>
-          <icosahedronGeometry args={[1, 1]} />
-          <MeshDistortMaterial 
+          <sphereGeometry args={[1, 64, 64]} />
+          <meshStandardMaterial 
             color="#ef4444" 
-            roughness={0.2} 
-            metalness={0.8} 
-            distort={0.4} 
-            speed={2} 
+            roughness={0.1} 
+            metalness={0.9} 
           />
         </mesh>
       </Float>

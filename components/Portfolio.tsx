@@ -107,7 +107,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="glass-strong rounded-3xl p-10 text-center relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-black/20 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 to-transparent dark:from-red-900/20 dark:to-transparent pointer-events-none" />
           <h3 className="relative z-10 text-2xl font-bold text-gray-900 dark:text-white mb-8">
             Our <span className="gradient-text">Impact in Numbers</span>
           </h3>
