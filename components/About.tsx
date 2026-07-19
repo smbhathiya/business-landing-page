@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Award, Users, Target, TrendingUp } from 'lucide-react';
+import About3DElement from './About3DElement';
 
 const highlights = [
   { icon: Award, title: 'Industry Awards', description: 'Recognized as a top digital marketing agency for 3 consecutive years', gradient: 'from-red-600 to-red-500' },
@@ -81,7 +82,10 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="glass-strong rounded-3xl p-8 relative overflow-hidden">
+            {/* 3D Background Element peeking from behind the glass card */}
+            <About3DElement />
+            
+            <div className="glass-strong rounded-3xl p-8 relative overflow-hidden z-10">
               <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent dark:from-red-900/20 dark:to-transparent pointer-events-none rounded-3xl" />
               <div className="relative z-10 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Our Success Story</h3>
