@@ -113,7 +113,7 @@ const About = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3.5, repeat: Infinity }}
-              className="absolute -top-5 -left-5 glass-strong rounded-2xl px-5 py-4 shadow-xl"
+              className="absolute -top-5 -left-5 z-20 glass-strong rounded-2xl px-5 py-4 shadow-xl"
             >
               <div className="text-2xl font-bold gradient-text">300%</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Avg. Traffic Increase</div>
@@ -122,7 +122,7 @@ const About = () => {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-5 -right-5 glass-strong rounded-2xl px-5 py-4 shadow-xl"
+              className="absolute -bottom-5 -right-5 z-20 glass-strong rounded-2xl px-5 py-4 shadow-xl"
             >
               <div className="text-2xl font-bold gradient-text">24/7</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Support Available</div>
