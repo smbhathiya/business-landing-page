@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Search, BarChart3, Share2, PenTool, Smartphone, Zap } from 'lucide-react';
+import Services3DElement from './Services3DElement';
 
 const services = [
   {
@@ -66,6 +67,9 @@ const Services = () => {
         <div className="absolute bottom-16 left-16 w-80 h-80 bg-red-900/20 rounded-full blur-[110px] opacity-50" />
       </div>
 
+      {/* 3D Background Element behind everything */}
+      <Services3DElement />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -92,7 +96,7 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative z-20"
           style={{ perspective: 1200 }}
         >
           {services.map((service) => (
@@ -129,9 +133,9 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16"
+          className="mt-16 relative"
         >
-          <div className="glass-strong rounded-2xl p-12 text-center relative overflow-hidden">
+          <div className="glass-strong rounded-2xl p-12 text-center relative overflow-hidden z-10">
             <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 to-transparent dark:from-red-900/20 dark:to-transparent pointer-events-none" />
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Transform Your Business?</h3>

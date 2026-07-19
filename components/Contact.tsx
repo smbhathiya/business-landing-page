@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
+import Contact3DElement from './Contact3DElement';
 
 const contactInfo = [
   { icon: Mail, title: 'Email Us', details: ['hello@abc.com', 'support@abc.com'], description: 'Get in touch with our team', gradient: 'from-red-600 to-red-500' },
@@ -127,9 +128,12 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-5 relative"
           >
-            <div>
+            {/* 3D Background Element */}
+            <Contact3DElement />
+            
+            <div className="relative z-10">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Get in Touch</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                 We&rsquo;re here to help you succeed. Reach out through any channel below and we&rsquo;ll respond within 24 hours.
