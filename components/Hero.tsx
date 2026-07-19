@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, TrendingUp, Users, Target } from 'lucide-react';
+import Hero3DBackground from './Hero3DBackground';
 
 const stats = [
   { icon: TrendingUp, value: '500+', label: 'Campaigns Launched' },
@@ -11,33 +12,8 @@ const stats = [
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f7f5ff]">
-      {/* Pastel gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ scale: [1, 1.12, 1], opacity: [0.28, 0.42, 0.28] }}
-          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -top-48 -right-48 w-[600px] h-[600px] bg-violet-300 rounded-full blur-[140px]"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.15, 1], opacity: [0.22, 0.35, 0.22] }}
-          transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute -bottom-48 -left-48 w-[550px] h-[550px] bg-blue-300 rounded-full blur-[140px]"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.08, 1], opacity: [0.18, 0.28, 0.18] }}
-          transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-pink-200 rounded-full blur-[120px]"
-        />
-        {/* Subtle dot grid */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(124,58,237,0.07) 1px, transparent 0)',
-            backgroundSize: '44px 44px',
-          }}
-        />
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <Hero3DBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="text-center">
@@ -48,8 +24,8 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2.5 glass-card px-5 py-2.5 rounded-full mb-10"
           >
-            <span className="w-2 h-2 bg-violet-500 rounded-full animate-pulse" />
-            <span className="text-gray-600 text-sm font-medium">Trusted by 200+ Businesses Worldwide</span>
+            <span className="w-2 h-2 bg-red-900/30 rounded-full animate-pulse" />
+            <span className="text-gray-600 dark:text-gray-300 text-sm font-medium">Trusted by 200+ Businesses Worldwide</span>
           </motion.div>
 
           {/* Heading */}
@@ -57,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
           >
             Transform Your Business with
             <span className="block gradient-text mt-2">Digital Excellence</span>
@@ -68,7 +44,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg sm:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             We help businesses grow their digital presence with cutting-edge marketing strategies,
             data-driven insights, and innovative solutions that deliver real results.
@@ -84,7 +60,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-violet-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-base glow-btn transition-all duration-300 flex items-center gap-2"
+              className="bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-4 rounded-full font-semibold text-base glow-btn transition-all duration-300 flex items-center gap-2"
             >
               Start Your Journey
               <ArrowRight size={18} />
@@ -93,9 +69,9 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="glass-card text-gray-700 hover:text-gray-900 px-8 py-4 rounded-full font-semibold text-base flex items-center gap-2 transition-all duration-300"
+              className="glass-card text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white px-8 py-4 rounded-full font-semibold text-base flex items-center gap-2 transition-all duration-300"
             >
-              <Play size={18} className="text-violet-600" />
+              <Play size={18} className="text-red-500" />
               Watch Demo
             </motion.button>
           </motion.div>
@@ -106,6 +82,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto"
+            style={{ perspective: 1000 }}
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -113,16 +90,16 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-                whileHover={{ scale: 1.06, y: -4 }}
-                className="glass-card rounded-2xl p-5 text-center"
+                whileHover={{ scale: 1.05, y: -8, rotateX: 5, rotateY: -5, zIndex: 10, boxShadow: "0 20px 40px rgba(220, 38, 38, 0.15)" }}
+                className="glass-card rounded-2xl p-5 text-center transform-gpu"
               >
                 <div className="flex justify-center mb-3">
-                  <div className="w-9 h-9 bg-gradient-to-br from-violet-600 to-blue-600 rounded-xl flex items-center justify-center">
+                  <div className="w-9 h-9 bg-gradient-to-br from-red-600 to-red-500 rounded-xl flex items-center justify-center">
                     <stat.icon className="w-4 h-4 text-white" />
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-gray-900 mb-0.5">{stat.value}</div>
-                <div className="text-gray-500 text-xs">{stat.label}</div>
+                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-0.5">{stat.value}</div>
+                <div className="text-gray-500 dark:text-gray-400 text-xs">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -139,12 +116,12 @@ const Hero = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-800 rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-gradient-to-b from-violet-500 to-blue-500 rounded-full mt-2"
+            className="w-1 h-3 bg-gradient-to-b from-red-600 to-red-500 rounded-full mt-2"
           />
         </motion.div>
       </motion.div>

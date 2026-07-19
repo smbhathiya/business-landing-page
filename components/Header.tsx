@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   const [hidden, setHidden] = useState(false);
@@ -59,10 +60,10 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08 }}
                 whileHover={{ y: -2 }}
-                className="relative text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200 group"
+                className="relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-colors duration-200 group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-600 to-blue-500 group-hover:w-full transition-all duration-300 rounded-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-300 rounded-full" />
               </motion.a>
             ))}
           </nav>
@@ -74,15 +75,20 @@ const Header = () => {
             transition={{ delay: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden lg:block bg-gradient-to-r from-violet-600 to-blue-600 text-white px-6 py-2.5 rounded-full font-semibold text-sm glow-btn transition-all duration-300"
+            className="hidden lg:block bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2.5 rounded-full font-semibold text-sm glow-btn transition-all duration-300"
           >
             Get Started
           </motion.button>
 
+          {/* Theme Toggle (Temporarily Hidden) */}
+          {/* <div className="hidden lg:block">
+            <ThemeToggle />
+          </div> */}
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 glass-card flex-shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
+            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white glass-card flex-shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
             style={{ zIndex: 60 }}
             aria-label="Open mobile menu"
           >
@@ -99,15 +105,14 @@ const Header = () => {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="lg:hidden fixed top-0 left-0 w-full h-full z-[70]"
-            style={{ background: '#f7f5ff' }}
+            className="lg:hidden fixed top-0 left-0 w-full h-full z-[70] bg-[#fafafa] dark:bg-[#050505]"
           >
             <div className="flex flex-col h-full">
-              <div className="flex justify-between items-center p-6 border-b border-violet-100">
+              <div className="flex justify-between items-center p-6 border-b border-red-600">
                 <span className="text-2xl font-bold gradient-text">ABC</span>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-lg text-gray-500 hover:text-gray-900 glass-card transition-colors"
+                  className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white glass-card transition-colors"
                 >
                   <X size={22} />
                 </button>
@@ -121,7 +126,7 @@ const Header = () => {
                     initial={{ opacity: 0, x: -24 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.07 }}
-                    className="text-3xl font-bold text-gray-700 hover:text-gray-900 transition-colors"
+                    className="text-3xl font-bold text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -129,8 +134,8 @@ const Header = () => {
                 ))}
               </div>
 
-              <div className="p-6 border-t border-violet-100">
-                <button className="w-full bg-gradient-to-r from-violet-600 to-blue-600 text-white px-6 py-4 rounded-full font-semibold text-lg glow-btn transition-all duration-300">
+              <div className="p-6 border-t border-red-600">
+                <button className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-4 rounded-full font-semibold text-lg glow-btn transition-all duration-300">
                   Get Started
                 </button>
               </div>

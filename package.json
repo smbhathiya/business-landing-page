@@ -1,6 +1,6 @@
 {
-  "name": "landing-new",
-  "version": "0.2.0",
+  "name": "business-landing-page",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -10,13 +10,18 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "fix-react2shell-next": "^1.1.4",
     "framer-motion": "^12.23.25",
+    "framer-motion-3d": "^12.4.13",
     "lucide-react": "^0.556.0",
     "next": "16.0.10",
     "next-sitemap": "^4.2.3",
+    "next-themes": "^0.4.6",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -24,6 +29,7 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.185.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.8",
     "tailwindcss": "^4",
