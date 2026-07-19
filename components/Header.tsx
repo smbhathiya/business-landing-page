@@ -80,10 +80,10 @@ const Header = () => {
             Get Started
           </motion.button>
 
-          {/* Theme Toggle */}
-          <div className="hidden lg:block">
+          {/* Theme Toggle (Temporarily Hidden) */}
+          {/* <div className="hidden lg:block">
             <ThemeToggle />
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

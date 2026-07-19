@@ -18,7 +18,7 @@ const FloatingKnot = () => {
   return (
     <group ref={group}>
       <Float speed={1.5} rotationIntensity={2} floatIntensity={2}>
-        <mesh position={[-3.0, 0, -1]} scale={1.0}>
+        <mesh position={[-3.0, 0, -1]} scale={0.8}>
           <torusKnotGeometry args={[1, 0.3, 128, 32]} />
           <meshStandardMaterial 
             color="#dc2626" 
