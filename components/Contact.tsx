@@ -5,16 +5,16 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
 
 const contactInfo = [
-  { icon: Mail, title: 'Email Us', details: ['hello@abc.com', 'support@abc.com'], description: 'Get in touch with our team', gradient: 'from-violet-600 to-purple-600' },
-  { icon: Phone, title: 'Call Us', details: ['+1 (555) 123-4567', '+1 (555) 987-6543'], description: 'Speak with our experts', gradient: 'from-blue-600 to-cyan-600' },
-  { icon: MapPin, title: 'Visit Us', details: ['123 Digital Street', 'Tech City, TC 12345'], description: 'Our office location', gradient: 'from-purple-600 to-pink-600' },
-  { icon: Clock, title: 'Business Hours', details: ['Mon – Fri: 9AM – 6PM', 'Sat: 10AM – 4PM'], description: 'When we are available', gradient: 'from-cyan-600 to-blue-600' },
+  { icon: Mail, title: 'Email Us', details: ['hello@abc.com', 'support@abc.com'], description: 'Get in touch with our team', gradient: 'from-amber-500 to-orange-400' },
+  { icon: Phone, title: 'Call Us', details: ['+1 (555) 123-4567', '+1 (555) 987-6543'], description: 'Speak with our experts', gradient: 'from-yellow-500 to-amber-400' },
+  { icon: MapPin, title: 'Visit Us', details: ['123 Digital Street', 'Tech City, TC 12345'], description: 'Our office location', gradient: 'from-orange-500 to-amber-500' },
+  { icon: Clock, title: 'Business Hours', details: ['Mon – Fri: 9AM – 6PM', 'Sat: 10AM – 4PM'], description: 'When we are available', gradient: 'from-amber-400 to-yellow-500' },
 ];
 
 const inputCls = [
   'w-full px-4 py-3 rounded-xl text-gray-900 text-sm placeholder-gray-400',
   'bg-white/70 border border-gray-200',
-  'focus:outline-none focus:border-violet-400 focus:bg-white',
+  'focus:outline-none focus:border-amber-400 focus:bg-white',
   'transition-all duration-200',
 ].join(' ');
 
@@ -33,8 +33,8 @@ const Contact = () => {
   return (
     <section id="contact" className="relative py-24 bg-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-violet-200 rounded-full blur-[140px] opacity-50" />
-        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-blue-200 rounded-full blur-[140px] opacity-50" />
+        <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-amber-200 rounded-full blur-[140px] opacity-50" />
+        <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-yellow-200 rounded-full blur-[140px] opacity-50" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-violet-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
+          <span className="inline-block text-amber-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
             Get In Touch
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
@@ -113,7 +113,7 @@ const Contact = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-violet-600 to-blue-600 text-white py-4 rounded-xl font-semibold text-base glow-btn transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-white py-4 rounded-xl font-semibold text-base glow-btn transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Send size={18} />
                 Send Message
@@ -165,7 +165,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="glass-strong rounded-2xl p-7 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-100/60 to-blue-100/60 pointer-events-none rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-50/60 to-yellow-50/60 pointer-events-none rounded-2xl" />
               <div className="relative z-10">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Free Consultation</h4>
                 <p className="text-gray-500 text-sm mb-5 leading-relaxed">
@@ -174,7 +174,7 @@ const Contact = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-violet-600 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold text-sm glow-btn transition-all duration-300"
+                  className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-6 py-3 rounded-xl font-semibold text-sm glow-btn transition-all duration-300"
                 >
                   Schedule Consultation
                 </motion.button>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5ff;
+  --background: #fafafa;
   --foreground: #171717;
 }
 
@@ -21,25 +21,25 @@ body {
 /* ── Card utilities ── */
 .glass-card {
   background: #ffffff;
-  border: 1px solid rgba(124, 58, 237, 0.08);
-  box-shadow: 0 4px 24px rgba(109, 40, 217, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(245, 158, 11, 0.08);
+  box-shadow: 0 4px 24px rgba(245, 158, 11, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .glass-strong {
   background: #ffffff;
-  border: 1px solid rgba(124, 58, 237, 0.1);
-  box-shadow: 0 8px 32px rgba(109, 40, 217, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(245, 158, 11, 0.1);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .glass-nav {
   background: #ffffff;
-  border-bottom: 1px solid rgba(124, 58, 237, 0.08);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.08);
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* ── Gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 45%, #3b82f6 100%);
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 45%, #eab308 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -47,12 +47,12 @@ body {
 
 /* ── Glow button ── */
 .glow-btn {
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.35), 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.35), 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 35px rgba(124, 58, 237, 0.55), 0 0 60px rgba(99, 102, 241, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.55), 0 0 60px rgba(234, 179, 8, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ── Scrollbar ── */
@@ -61,11 +61,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #ede9ff;
+  background: #fef3c7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #7c3aed, #3b82f6);
+  background: linear-gradient(to bottom, #f59e0b, #eab308);
   border-radius: 3px;
 }
 

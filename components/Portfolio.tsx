@@ -9,21 +9,21 @@ const testimonials = [
     role: 'CEO, TechStart Inc.',
     content: 'abc transformed our online presence completely. Our organic traffic increased by 400% in just 6 months, and our conversion rates improved dramatically.',
     rating: 5,
-    gradient: 'from-violet-600 to-purple-600',
+    gradient: 'from-amber-500 to-orange-400',
   },
   {
     name: 'Michael Chen',
     role: 'Marketing Director, GrowthCo',
     content: 'The team at abc is exceptional. They not only delivered on their promises but exceeded our expectations. Our ROI has been incredible.',
     rating: 5,
-    gradient: 'from-blue-600 to-cyan-600',
+    gradient: 'from-yellow-500 to-amber-400',
   },
   {
     name: 'Emily Rodriguez',
     role: 'Founder, EcoStyle',
     content: 'Working with abc has been a game-changer for our business. Their strategic approach and attention to detail have helped us scale rapidly.',
     rating: 5,
-    gradient: 'from-purple-600 to-pink-600',
+    gradient: 'from-orange-500 to-amber-500',
   },
 ];
 
@@ -38,7 +38,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="relative py-24 bg-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-violet-200 rounded-full blur-[120px] opacity-50" />
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-amber-200 rounded-full blur-[120px] opacity-50" />
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-200 rounded-full blur-[120px] opacity-50" />
       </div>
 
@@ -50,7 +50,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-violet-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
+          <span className="inline-block text-amber-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
             Testimonials
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
@@ -63,7 +63,7 @@ const Portfolio = () => {
         </motion.div>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16" style={{ perspective: 1200 }}>
           {testimonials.map((t, index) => (
             <motion.div
               key={t.name}
@@ -71,10 +71,10 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: index * 0.12 }}
               viewport={{ once: true }}
-              whileHover={{ y: -7 }}
-              className="glass-card rounded-2xl p-7 transition-all duration-300 flex flex-col"
+              whileHover={{ y: -10, scale: 1.02, rotateX: 3, rotateY: -3, zIndex: 10, boxShadow: "0 25px 50px -12px rgba(245, 158, 11, 0.2)" }}
+              className="glass-card rounded-2xl p-7 transition-all duration-300 flex flex-col transform-gpu"
             >
-              <Quote className="w-7 h-7 text-violet-400 mb-5 flex-shrink-0" />
+              <Quote className="w-7 h-7 text-amber-400 mb-5 flex-shrink-0" />
 
               <div className="flex mb-3">
                 {[...Array(t.rating)].map((_, i) => (
@@ -107,7 +107,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="glass-strong rounded-3xl p-10 text-center relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-100/60 to-blue-100/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-50/60 to-yellow-50/60 pointer-events-none" />
           <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-8">
             Our <span className="gradient-text">Impact in Numbers</span>
           </h3>

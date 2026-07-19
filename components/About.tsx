@@ -4,24 +4,24 @@ import { motion } from 'framer-motion';
 import { Award, Users, Target, TrendingUp } from 'lucide-react';
 
 const highlights = [
-  { icon: Award, title: 'Industry Awards', description: 'Recognized as a top digital marketing agency for 3 consecutive years', gradient: 'from-violet-600 to-purple-600' },
-  { icon: Users, title: 'Expert Team', description: 'Certified professionals with 10+ years of combined experience', gradient: 'from-blue-600 to-cyan-600' },
-  { icon: Target, title: 'Data-Driven', description: 'Results-focused approach with measurable ROI for every campaign', gradient: 'from-purple-600 to-pink-600' },
-  { icon: TrendingUp, title: 'Proven Results', description: 'Average 300% increase in organic traffic for our clients', gradient: 'from-cyan-600 to-blue-600' },
+  { icon: Award, title: 'Industry Awards', description: 'Recognized as a top digital marketing agency for 3 consecutive years', gradient: 'from-amber-500 to-orange-400' },
+  { icon: Users, title: 'Expert Team', description: 'Certified professionals with 10+ years of combined experience', gradient: 'from-yellow-500 to-amber-400' },
+  { icon: Target, title: 'Data-Driven', description: 'Results-focused approach with measurable ROI for every campaign', gradient: 'from-orange-500 to-amber-500' },
+  { icon: TrendingUp, title: 'Proven Results', description: 'Average 300% increase in organic traffic for our clients', gradient: 'from-amber-400 to-yellow-500' },
 ];
 
 const coreValues = [
-  { icon: Target, title: 'Results-Driven', desc: 'We focus on delivering measurable results that directly impact your business growth and success.', gradient: 'from-violet-600 to-purple-600' },
-  { icon: Users, title: 'Client-First', desc: 'Your success is our priority. We build lasting partnerships based on trust, transparency, and mutual growth.', gradient: 'from-blue-600 to-cyan-600' },
+  { icon: Target, title: 'Results-Driven', desc: 'We focus on delivering measurable results that directly impact your business growth and success.', gradient: 'from-amber-500 to-orange-400' },
+  { icon: Users, title: 'Client-First', desc: 'Your success is our priority. We build lasting partnerships based on trust, transparency, and mutual growth.', gradient: 'from-yellow-500 to-amber-400' },
   { icon: TrendingUp, title: 'Innovation', desc: 'We stay ahead of industry trends and leverage cutting-edge technologies to give you a competitive edge.', gradient: 'from-purple-600 to-blue-600' },
 ];
 
 const About = () => {
   return (
-    <section id="about" className="relative py-24 bg-[#f7f5ff] overflow-hidden">
+    <section id="about" className="relative py-24 bg-[#fafafa] overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-violet-200 rounded-full blur-[140px] opacity-60" />
-        <div className="absolute bottom-1/3 left-0 w-[450px] h-[450px] bg-blue-200 rounded-full blur-[140px] opacity-60" />
+        <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-amber-200 rounded-full blur-[140px] opacity-60" />
+        <div className="absolute bottom-1/3 left-0 w-[450px] h-[450px] bg-yellow-200 rounded-full blur-[140px] opacity-60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block text-violet-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
+            <span className="inline-block text-amber-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
               Who We Are
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">

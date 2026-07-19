@@ -8,46 +8,46 @@ const teamMembers = [
     name: 'Sarah Johnson', role: 'CEO & Founder',
     bio: '10+ years of digital marketing experience. Former Google Ads specialist with a passion for data-driven strategies.',
     social: { linkedin: '#', twitter: '#', email: 'sarah@abc.com' },
-    gradient: 'from-violet-600 to-purple-600',
+    gradient: 'from-amber-500 to-orange-400',
   },
   {
     name: 'Michael Chen', role: 'Head of Strategy',
     bio: 'Strategic marketing expert with expertise in SEO, content marketing, and conversion optimization.',
     social: { linkedin: '#', twitter: '#', email: 'michael@abc.com' },
-    gradient: 'from-blue-600 to-cyan-600',
+    gradient: 'from-yellow-500 to-amber-400',
   },
   {
     name: 'Emily Rodriguez', role: 'Creative Director',
     bio: 'Award-winning creative professional specializing in brand development and visual storytelling.',
     social: { linkedin: '#', twitter: '#', email: 'emily@abc.com' },
-    gradient: 'from-purple-600 to-pink-600',
+    gradient: 'from-orange-500 to-amber-500',
   },
   {
     name: 'David Kim', role: 'Technical Lead',
     bio: 'Full-stack developer and technical SEO expert with deep knowledge of web performance and user experience.',
     social: { linkedin: '#', twitter: '#', email: 'david@abc.com' },
-    gradient: 'from-cyan-600 to-blue-600',
+    gradient: 'from-amber-400 to-yellow-500',
   },
   {
     name: 'Lisa Thompson', role: 'PPC Specialist',
     bio: 'Google Ads certified professional with 8+ years optimizing campaigns for maximum ROI.',
     social: { linkedin: '#', twitter: '#', email: 'lisa@abc.com' },
-    gradient: 'from-violet-600 to-blue-600',
+    gradient: 'from-amber-500 to-yellow-500',
   },
   {
     name: 'Alex Morgan', role: 'Content Strategist',
     bio: 'Content marketing expert with a background in journalism and digital storytelling.',
     social: { linkedin: '#', twitter: '#', email: 'alex@abc.com' },
-    gradient: 'from-pink-600 to-violet-600',
+    gradient: 'from-orange-500 to-amber-500',
   },
 ];
 
 const Team = () => {
   return (
-    <section id="team" className="relative py-24 bg-[#f7f5ff] overflow-hidden">
+    <section id="team" className="relative py-24 bg-[#fafafa] overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[450px] h-[450px] bg-purple-200 rounded-full blur-[140px] opacity-60" />
-        <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-blue-200 rounded-full blur-[140px] opacity-60" />
+        <div className="absolute top-0 right-1/4 w-[450px] h-[450px] bg-orange-200 rounded-full blur-[140px] opacity-60" />
+        <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-yellow-200 rounded-full blur-[140px] opacity-60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +58,7 @@ const Team = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-violet-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
+          <span className="inline-block text-amber-600 font-semibold text-xs uppercase tracking-[0.18em] mb-4">
             The Team
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
@@ -70,7 +70,7 @@ const Team = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ perspective: 1200 }}>
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -78,8 +78,8 @@ const Team = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: index * 0.09 }}
               viewport={{ once: true }}
-              whileHover={{ y: -7 }}
-              className="glass-card rounded-2xl p-7 text-center transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.05, rotateX: 5, rotateY: 5, zIndex: 10, boxShadow: "0 20px 40px rgba(245, 158, 11, 0.15)" }}
+              className="glass-card rounded-2xl p-7 text-center transition-all duration-300 transform-gpu"
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${member.gradient} rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg`}>
                 <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
@@ -119,7 +119,7 @@ const Team = () => {
           className="mt-16"
         >
           <div className="glass-strong rounded-2xl p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-100/60 to-blue-100/60 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-50/60 to-yellow-50/60 pointer-events-none" />
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Work with Our Team?</h3>
               <p className="text-lg mb-8 text-gray-500">
@@ -128,7 +128,7 @@ const Team = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-violet-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-base glow-btn transition-all duration-300"
+                className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-8 py-4 rounded-full font-semibold text-base glow-btn transition-all duration-300"
               >
                 Get Started Today
               </motion.button>

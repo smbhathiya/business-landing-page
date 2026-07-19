@@ -47,11 +47,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#f7f5ff] overflow-hidden">
+    <footer className="relative bg-[#fafafa] overflow-hidden">
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-violet-200 rounded-full blur-[140px] opacity-50" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-200 rounded-full blur-[140px] opacity-50" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-200 rounded-full blur-[140px] opacity-50" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-yellow-200 rounded-full blur-[140px] opacity-50" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -72,7 +72,7 @@ const Footer = () => {
               <div className="space-y-2.5">
                 {contactItems.map(({ Icon, text }) => (
                   <div key={text} className="flex items-center text-gray-500 text-sm gap-3">
-                    <Icon className="w-4 h-4 text-violet-500 flex-shrink-0" />
+                    <Icon className="w-4 h-4 text-amber-500 flex-shrink-0" />
                     <span>{text}</span>
                   </div>
                 ))}
@@ -91,7 +91,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-500 hover:text-violet-600 transition-colors duration-200 text-sm">
+                  <a href={link.href} className="text-gray-500 hover:text-amber-600 transition-colors duration-200 text-sm">
                     {link.name}
                   </a>
                 </li>
@@ -110,7 +110,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-500 hover:text-violet-600 transition-colors duration-200 text-sm">
+                  <a href={link.href} className="text-gray-500 hover:text-amber-600 transition-colors duration-200 text-sm">
                     {link.name}
                   </a>
                 </li>
@@ -129,7 +129,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-500 hover:text-violet-600 transition-colors duration-200 text-sm">
+                  <a href={link.href} className="text-gray-500 hover:text-amber-600 transition-colors duration-200 text-sm">
                     {link.name}
                   </a>
                 </li>
@@ -140,7 +140,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-violet-100">
+      <div className="border-t border-amber-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <motion.p
@@ -166,7 +166,7 @@ const Footer = () => {
                   href={social.href}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-9 h-9 glass-card rounded-lg flex items-center justify-center text-gray-400 hover:text-violet-600 transition-all duration-200"
+                  className="w-9 h-9 glass-card rounded-lg flex items-center justify-center text-gray-400 hover:text-amber-600 transition-all duration-200"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
