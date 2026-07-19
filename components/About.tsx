@@ -13,7 +13,7 @@ const highlights = [
 const coreValues = [
   { icon: Target, title: 'Results-Driven', desc: 'We focus on delivering measurable results that directly impact your business growth and success.', gradient: 'from-red-600 to-red-500' },
   { icon: Users, title: 'Client-First', desc: 'Your success is our priority. We build lasting partnerships based on trust, transparency, and mutual growth.', gradient: 'from-red-600 to-red-500' },
-  { icon: TrendingUp, title: 'Innovation', desc: 'We stay ahead of industry trends and leverage cutting-edge technologies to give you a competitive edge.', gradient: 'from-purple-600 to-blue-600' },
+  { icon: TrendingUp, title: 'Innovation', desc: 'We stay ahead of industry trends and leverage cutting-edge technologies to give you a competitive edge.', gradient: 'from-red-600 to-red-500' },
 ];
 
 const About = () => {
@@ -62,7 +62,7 @@ const About = () => {
                   className="glass-card rounded-xl p-4 flex items-start gap-3"
                 >
                   <div className={`flex-shrink-0 w-9 h-9 bg-gradient-to-br ${h.gradient} rounded-xl flex items-center justify-center`}>
-                    <h.icon className="w-4 h-4 text-gray-900 dark:text-white" />
+                    <h.icon className="w-4 h-4 text-white" />
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">{h.title}</h3>
@@ -82,7 +82,7 @@ const About = () => {
             className="relative"
           >
             <div className="glass-strong rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-100/50 to-blue-100/50 pointer-events-none rounded-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent dark:from-red-900/20 dark:to-transparent pointer-events-none rounded-3xl" />
               <div className="relative z-10 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Our Success Story</h3>
                 <div className="grid grid-cols-2 gap-4 mb-8">
@@ -149,7 +149,7 @@ const About = () => {
                 className="glass-card rounded-2xl p-8 transition-all duration-300"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${val.gradient} rounded-xl flex items-center justify-center mx-auto mb-5`}>
-                  <val.icon className="w-6 h-6 text-gray-900 dark:text-white" />
+                  <val.icon className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-3">{val.title}</h4>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{val.desc}</p>

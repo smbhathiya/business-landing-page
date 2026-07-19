@@ -106,7 +106,7 @@ const Services = () => {
                 className={`inline-flex items-center justify-center bg-gradient-to-br ${service.gradient} rounded-xl mb-5 shadow-lg`}
                 style={{ width: 52, height: 52 }}
               >
-                <service.icon className="w-6 h-6 text-gray-900 dark:text-white" />
+                <service.icon className="w-6 h-6 text-white" />
               </div>
 
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2.5">{service.title}</h3>
