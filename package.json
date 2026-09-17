@@ -1,6 +1,6 @@
 {
   "name": "business-landing-page",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -10,10 +10,10 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.6.1",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
     "fix-react2shell-next": "^1.1.4",
-    "framer-motion": "^12.23.25",
+    "framer-motion": "^12.43.0",
     "framer-motion-3d": "^12.4.13",
     "lucide-react": "^0.556.0",
     "next": "16.0.10",
@@ -24,15 +24,15 @@
     "three": "^0.185.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^24",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/three": "^0.185.1",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.7",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.13.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.185.4",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.0.8",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
   }
 }
