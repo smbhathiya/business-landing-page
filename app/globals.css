@@ -136,3 +136,19 @@ html {
 .animate-float-rev { animation: float-rev 5s ease-in-out infinite; }
 .animate-orb       { animation: orb-pulse 7s ease-in-out infinite; }
 .animate-shimmer   { animation: shimmer 2.5s infinite; }
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
