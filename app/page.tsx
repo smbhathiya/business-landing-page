@@ -1,3 +1,7 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import Script from 'next/script';
+import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck, Zap, TrendingUp } from 'lucide-react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
@@ -7,146 +11,103 @@ import Team from '../components/Team';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
-import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'ABC Digital Marketing Agency | Enterprise SEO, PPC & Growth Engineering',
+  description:
+    'Scale your business with ABC Digital Marketing Agency. We engineer high-velocity growth architectures: Technical SEO, Google & Meta Ads, Next.js web applications, and marketing automation.',
+  keywords: [
+    'digital marketing agency',
+    'enterprise SEO services',
+    'PPC advertising agency',
+    'Google Ads management',
+    'social media marketing',
+    'conversion rate optimization',
+    'Next.js web development agency',
+    'B2B growth agency',
+    'marketing automation consultant',
+    'performance marketing',
+  ].join(', '),
+  authors: [{ name: 'ABC Digital Agency' }],
+  metadataBase: new URL('https://landing2025.bhathiya.dev'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'ABC Digital Marketing Agency | Enterprise SEO, PPC & Growth Engineering',
+    description:
+      'Transform your customer acquisition with ABC. We build full-funnel search, paid acquisition, and headless web platforms delivering documented revenue.',
+    url: 'https://landing2025.bhathiya.dev',
+    siteName: 'ABC Digital Marketing Agency',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ABC Digital Marketing Agency - Enterprise Growth Architecture',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ABC Digital Marketing Agency | Growth Engineering',
+    description:
+      'Scale your business with algorithmic SEO, paid media buying, and modern Next.js web development.',
+    images: ['/twitter-image.jpg'],
+    creator: '@abc_digital',
+    site: '@abc_digital',
+  },
+};
 
 export default function Home() {
   // Structured Data for Organization
   const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ABC Digital Marketing Agency",
-    "url": "https://landing2025.bhathiya.dev",
-    "logo": "https://landing2025.bhathiya.dev/logo.png",
-    "description": "Transform your business with ABC's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Digital Street",
-      "addressLocality": "Tech City",
-      "addressRegion": "TC",
-      "postalCode": "12345",
-      "addressCountry": "US"
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'ABC Digital Marketing Agency',
+    url: 'https://landing2025.bhathiya.dev',
+    logo: 'https://landing2025.bhathiya.dev/logo.png',
+    description:
+      "Transform your business with ABC's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.",
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '123 Digital Street',
+      addressLocality: 'Tech City',
+      addressRegion: 'TC',
+      postalCode: '12345',
+      addressCountry: 'US',
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service",
-      "email": "hello@abc.com"
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-123-4567',
+      contactType: 'customer service',
+      email: 'hello@abc.com',
     },
-    "sameAs": [
-      "https://www.facebook.com/abcdigital",
-      "https://www.twitter.com/abc_digital",
-      "https://www.linkedin.com/company/abc-digital",
-      "https://www.instagram.com/abc_digital"
+    sameAs: [
+      'https://www.facebook.com/abcdigital',
+      'https://www.twitter.com/abc_digital',
+      'https://www.linkedin.com/company/abc-digital',
+      'https://www.instagram.com/abc_digital',
     ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.7128,
-        "longitude": -74.0060
-      },
-      "geoRadius": "50000"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Marketing Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "SEO Optimization",
-            "description": "Improve your search engine rankings and drive organic traffic"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "PPC Advertising",
-            "description": "Maximize your ROI with targeted pay-per-click campaigns"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Social Media Marketing",
-            "description": "Build meaningful connections with your audience"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Content Marketing",
-            "description": "Create compelling content that resonates with your audience"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Web Design & Development",
-            "description": "Build stunning, high-converting websites"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Marketing Automation",
-            "description": "Streamline your marketing processes with smart automation"
-          }
-        }
-      ]
-    }
   };
 
-  // Structured Data for Local Business
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "ABC Digital Marketing Agency",
-    "image": "https://landing2025.bhathiya.dev/office.jpg",
-    "description": "Professional digital marketing agency providing comprehensive online marketing solutions",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Digital Street",
-      "addressLocality": "Tech City",
-      "addressRegion": "TC",
-      "postalCode": "12345",
-      "addressCountry": "US"
+  // Structured Data for Website
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'ABC Digital Marketing Agency',
+    url: 'https://landing2025.bhathiya.dev',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://landing2025.bhathiya.dev/services?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 40.7128,
-      "longitude": -74.0060
-    },
-    "url": "https://landing2025.bhathiya.dev",
-    "telephone": "+1-555-123-4567",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "16:00"
-      }
-    ],
-    "priceRange": "$$",
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card, Bank Transfer"
   };
 
   return (
     <>
-      {/* Structured Data */}
       <Script
         id="organization-schema"
         type="application/ld+json"
@@ -155,19 +116,82 @@ export default function Home() {
         }}
       />
       <Script
-        id="local-business-schema"
+        id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
+          __html: JSON.stringify(websiteSchema),
         }}
       />
-      
-      <main className="min-h-screen">
+
+      <main className="min-h-screen bg-background">
         <Header />
         <Hero />
         <Services />
         <About />
         <Portfolio />
+
+        {/* Pricing Teaser Section */}
+        <section className="relative py-24 bg-background overflow-hidden border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="glass-strong rounded-3xl p-10 sm:p-16 border border-white/10 bg-black/60 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] pointer-events-none" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                <div className="lg:col-span-7 space-y-5">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-red-400 uppercase tracking-wider bg-red-500/10 px-3.5 py-1.5 rounded-full border border-red-500/20">
+                    <Sparkles size={14} />
+                    <span>Predictable Retainers</span>
+                  </span>
+                  <h2 className="text-3xl sm:text-4xl font-black text-white font-poppins leading-tight">
+                    Transparent Growth Packages.
+                    <span className="block gradient-text">Zero Lock-In Contracts.</span>
+                  </h2>
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Choose from our Starter, Growth Engine, or Enterprise Scale retainers. Every plan includes dedicated senior strategists, weekly sprint reviews, and live 24/7 attribution dashboards.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    {[
+                      '90-Day Initial Growth Sprints',
+                      '100% IP & Creative Ownership',
+                      'Live GA4 & CAPI Dashboards',
+                      'Dedicated Pod with Senior Leads',
+                    ].map((perk) => (
+                      <div key={perk} className="flex items-center text-xs text-gray-300 font-medium">
+                        <CheckCircle2 className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
+                        <span>{perk}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5 text-center lg:text-right">
+                  <div className="glass-card rounded-2xl p-8 border border-red-500/30 bg-black/80 space-y-6 text-left">
+                    <div className="flex justify-between items-baseline">
+                      <span className="text-xs text-gray-400 font-semibold uppercase">Plans Starting From</span>
+                      <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
+                        Save 20% Annual
+                      </span>
+                    </div>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl sm:text-5xl font-black text-white font-poppins">$2,499</span>
+                      <span className="text-xs text-gray-400 font-medium">/ month</span>
+                    </div>
+                    <p className="text-xs text-gray-400">
+                      Everything needed to establish search dominance, profitably scale ads, and build high-converting funnels.
+                    </p>
+                    <Link href="/pricing" className="block">
+                      <button className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white py-3.5 rounded-xl font-bold text-sm glow-btn cursor-pointer flex items-center justify-center gap-2">
+                        <span>Compare All Plans &amp; Features</span>
+                        <ArrowRight size={16} />
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <Team />
         <Contact />
         <Footer />

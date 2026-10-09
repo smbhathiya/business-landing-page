@@ -2,18 +2,20 @@
 
 :root {
   --background: #fafafa;
-  --foreground: #171717;
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --card-border: rgba(220, 38, 38, 0.15);
+  --foreground: #111827;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(220, 38, 38, 0.12);
   --card-shadow: rgba(0, 0, 0, 0.05);
+  --glow-color: rgba(239, 68, 68, 0.15);
 }
 
 .dark {
-  --background: #050505;
-  --foreground: #f5f5f5;
-  --card-bg: rgba(20, 20, 20, 0.6);
-  --card-border: rgba(220, 38, 38, 0.2);
-  --card-shadow: rgba(0, 0, 0, 0.4);
+  --background: #07070a;
+  --foreground: #f3f4f6;
+  --card-bg: rgba(15, 15, 22, 0.7);
+  --card-border: rgba(239, 68, 68, 0.2);
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --glow-color: rgba(239, 68, 68, 0.25);
 }
 
 @theme inline {
@@ -26,68 +28,90 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
 }
 
-/* ── Card utilities ── */
+/* ── Luxury Card Utilities ── */
 .glass-card {
   background: var(--card-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--card-border);
   box-shadow: 0 4px 24px var(--card-shadow), 0 1px 4px rgba(220, 38, 38, 0.05);
 }
 
+.glass-card:hover {
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
 .glass-strong {
   background: var(--card-bg);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--card-border);
-  box-shadow: 0 8px 32px var(--card-shadow), 0 2px 8px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 12px 40px var(--card-shadow), 0 2px 10px rgba(220, 38, 38, 0.1);
 }
 
 .glass-nav {
-  background: var(--card-bg);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--card-border);
-  box-shadow: 0 1px 20px var(--card-shadow);
+  background: rgba(7, 7, 10, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* ── Gradient text ── */
+/* ── High-Contrast Gradient Text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 45%, #991b1b 100%);
+  background: linear-gradient(135deg, #ff4d4d 0%, #ef4444 45%, #b91c1c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Glow button ── */
+.gradient-text-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow Button & Controls ── */
 .glow-btn {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3), 0 4px 15px var(--card-shadow);
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.35), 0 4px 15px var(--card-shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 40px rgba(239, 68, 68, 0.5), 0 0 70px rgba(220, 38, 38, 0.3), 0 4px 15px var(--card-shadow);
+  box-shadow: 0 0 45px rgba(239, 68, 68, 0.6), 0 0 80px rgba(220, 38, 38, 0.3), 0 4px 15px var(--card-shadow);
+  transform: translateY(-1px);
 }
 
-/* ── Scrollbar ── */
+/* ── Ambient Background Pattern ── */
+.bg-grid-ambient {
+  background-image: radial-gradient(rgba(239, 68, 68, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── Modern Scrollbar ── */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #07070a;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #ef4444, #991b1b);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* ── Keyframe animations ── */
+/* ── Keyframe Animations ── */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
@@ -100,9 +124,15 @@ html {
 
 @keyframes orb-pulse {
   0%, 100% { opacity: 0.25; transform: scale(1); }
-  50% { opacity: 0.45; transform: scale(1.06); }
+  50% { opacity: 0.45; transform: scale(1.08); }
 }
 
-.animate-float     { animation: float     4s ease-in-out infinite; }
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-float     { animation: float 4s ease-in-out infinite; }
 .animate-float-rev { animation: float-rev 5s ease-in-out infinite; }
 .animate-orb       { animation: orb-pulse 7s ease-in-out infinite; }
+.animate-shimmer   { animation: shimmer 2.5s infinite; }
