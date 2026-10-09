@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,39 +19,28 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [hidden, setHidden] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const lastScrollY = useRef(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrolled(currentScrollY > 20);
-
-      // Hide when scrolling down past 100px, show when scrolling up
-      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        setHidden(true);
-        setIsMobileMenuOpen(false);
-      } else {
-        setHidden(false);
-      }
-      lastScrollY.current = currentScrollY;
+      setScrolled(window.scrollY > 20);
     };
+
+    // Initial check
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
   return (
-    <motion.header
-      initial={{ y: '-100%' }}
-      animate={{ y: hidden ? '-100%' : '0%' }}
-      transition={{ duration: 0.35, ease: 'easeInOut' }}
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-nav shadow-2xl backdrop-blur-xl' : 'bg-transparent'
+        scrolled
+          ? 'glass-nav shadow-2xl backdrop-blur-xl border-b border-red-500/15'
+          : 'bg-black/30 backdrop-blur-md border-b border-white/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -177,6 +166,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }

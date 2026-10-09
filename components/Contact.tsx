@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Contact3DElement from './Contact3DElement';
 
 const contactInfo = [
-  { icon: Mail, title: 'Email Directly', details: ['hello@abc.com', 'partnerships@abc.com'], description: 'Average response under 2 hours', gradient: 'from-red-600 to-red-500' },
+  { icon: Mail, title: 'Email Directly', details: ['hello@beezdigital.com', 'partnerships@beezdigital.com'], description: 'Average response under 2 hours', gradient: 'from-red-600 to-red-500' },
   { icon: Phone, title: 'Direct Phone', details: ['+1 (555) 123-4567', '+1 (555) 987-6543'], description: 'Mon-Fri 9am-6pm EST', gradient: 'from-red-600 to-red-500' },
   { icon: MapPin, title: 'Global Headquarters', details: ['123 Digital Street', 'Tech City, TC 12345'], description: 'Innovation District', gradient: 'from-red-600 to-red-500' },
   { icon: Clock, title: 'Dedicated Support', details: ['24/7 Priority for Retainers', 'Daily Slack Channel Sync'], description: 'Always accessible', gradient: 'from-red-600 to-red-500' },

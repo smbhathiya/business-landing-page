@@ -44,7 +44,7 @@ export default function About() {
             </h2>
 
             <p className="text-lg text-gray-300 mb-5 leading-relaxed">
-              Founded in 2018, ABC has evolved into a tier-one digital acceleration agency. We partner with ambitious
+              Founded in 2018, Beez Digital has evolved into a tier-one digital acceleration agency. We partner with ambitious
               startups and established enterprises to transform their search footprint and acquisition economics.
             </p>
 

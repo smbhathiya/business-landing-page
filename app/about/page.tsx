@@ -7,11 +7,12 @@ import PageHero from '../../components/PageHero';
 import AboutClient from './AboutClient';
 
 export const metadata: Metadata = {
-  title: 'About Us | ABC Digital Marketing Agency - Story & Philosophy',
+  title: 'About Us | Beez Digital Marketing Agency - Story & Philosophy',
   description:
-    'Discover ABC Digital Marketing Agency. Founded in 2018, our multidisciplinary team of SEO engineers, media buyers, and developers scale revenue with scientific rigor.',
+    'Discover Beez Digital Marketing Agency. Founded in 2018, our multidisciplinary team of SEO engineers, media buyers, and developers scale revenue with scientific rigor.',
   keywords: [
-    'about ABC digital agency',
+    'about Beez Digital',
+    'Beez Digital agency',
     'growth marketing team',
     'SEO agency leadership',
     'digital agency history',
@@ -22,17 +23,17 @@ export const metadata: Metadata = {
     canonical: 'https://landing2025.bhathiya.dev/about',
   },
   openGraph: {
-    title: 'About Us | ABC Digital Marketing Agency - Story & Philosophy',
+    title: 'About Us | Beez Digital Marketing Agency - Story & Philosophy',
     description:
-      'Learn about ABC Digital Marketing Agency: our mission, values, engineering-first culture, and verified client milestones.',
+      'Learn about Beez Digital Marketing Agency: our mission, values, engineering-first culture, and verified client milestones.',
     url: 'https://landing2025.bhathiya.dev/about',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'About ABC Digital Marketing Agency',
+        alt: 'About Beez Digital Marketing Agency',
       },
     ],
     locale: 'en_US',
@@ -40,11 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us | ABC Digital Marketing Agency',
+    title: 'About Us | Beez Digital Marketing Agency',
     description:
-      'Our story, mission, and the engineering principles behind ABC Digital Marketing Agency.',
+      'Our story, mission, and the engineering principles behind Beez Digital Marketing Agency.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
+    creator: '@beezdigital',
   },
 };
 
@@ -71,7 +72,7 @@ export default function AboutPage() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'ABC Digital Marketing Agency',
+    name: 'Beez Digital Marketing Agency',
     url: 'https://landing2025.bhathiya.dev',
     foundingDate: '2018',
     founder: {

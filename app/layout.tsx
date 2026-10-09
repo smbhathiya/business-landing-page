@@ -58,6 +58,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Beez Digital - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
     description: "Transform your business with Beez Digital's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation. Get measurable results and grow your business today.",

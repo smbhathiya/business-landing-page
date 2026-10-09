@@ -10,11 +10,18 @@ export default function PageLoader() {
   const [statusText, setStatusText] = useState('Initializing Growth Architecture...');
 
   useEffect(() => {
-    // Only run on client
-    const hasLoaded = sessionStorage.getItem('beez_loader_shown');
+    let hasLoaded = false;
+    try {
+      hasLoaded = Boolean(sessionStorage.getItem('beez_loader_shown'));
+    } catch {
+      hasLoaded = false;
+    }
+
     if (hasLoaded) {
-      setLoading(false);
-      return;
+      const skipTimer = setTimeout(() => {
+        setLoading(false);
+      }, 0);
+      return () => clearTimeout(skipTimer);
     }
 
     const interval = setInterval(() => {
@@ -23,8 +30,12 @@ export default function PageLoader() {
           clearInterval(interval);
           setTimeout(() => {
             setLoading(false);
-            sessionStorage.setItem('beez_loader_shown', 'true');
-          }, 400);
+            try {
+              sessionStorage.setItem('beez_loader_shown', 'true');
+            } catch {
+              // Ignore storage errors
+            }
+          }, 350);
           return 100;
         }
 

@@ -314,7 +314,7 @@ export default function ServicesClient() {
             <h2 className="text-3xl sm:text-4xl font-black text-white mb-4 font-poppins">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-400 text-sm">Everything you need to know about partnering with ABC Agency.</p>
+            <p className="text-gray-400 text-sm">Everything you need to know about partnering with Beez Digital.</p>
           </div>
 
           <div className="space-y-4">

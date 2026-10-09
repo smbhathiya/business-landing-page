@@ -36,7 +36,7 @@ const caseStudies = [
     highlight: '+420% Organic Traffic',
     secondaryMetric: '$4.2M Pipeline Added',
     deliverables: ['Programmatic Page Engine', 'Technical Indexation Fix', 'High-Tier Financial Links'],
-    testimonial: 'ABC took our stagnant organic search and turned it into our primary demo acquisition pipeline. The ROI has been phenomenal.',
+    testimonial: 'Beez Digital took our stagnant organic search and turned it into our primary demo acquisition pipeline. The ROI has been phenomenal.',
     author: 'David Sterling, Chief Marketing Officer',
   },
   {
@@ -49,7 +49,7 @@ const caseStudies = [
     highlight: '5.4x Blended ROAS',
     secondaryMetric: '-45% Lower CAC',
     deliverables: ['Dynamic Catalog Ads', 'UGC Creative Testing Pod', 'Triple Whale Attribution Setup'],
-    testimonial: 'We previously burned money with other agencies. ABC made our ad spend predictable, profitable, and ready to scale.',
+    testimonial: 'We previously burned money with other agencies. Beez Digital made our ad spend predictable, profitable, and ready to scale.',
     author: 'Emily Rodriguez, Founder & CEO',
   },
   {
@@ -88,7 +88,7 @@ const caseStudies = [
     highlight: '10x Search Visibility',
     secondaryMetric: '+310% App Downloads',
     deliverables: ['E-E-A-T Compliance Audit', 'Medical Schema Graph', 'Local City Landing Engines'],
-    testimonial: 'In a medical sector where trust is everything, ABC gave us an authoritative organic footprint that outranks legacy hospital networks.',
+    testimonial: 'In a medical sector where trust is everything, Beez Digital gave us an authoritative organic footprint that outranks legacy hospital networks.',
     author: 'Dr. Arthur Campbell, Chief Medical Officer',
   },
   {

@@ -7,32 +7,32 @@ import PageHero from '../../components/PageHero';
 import ContactClient from './ContactClient';
 
 export const metadata: Metadata = {
-  title: 'Contact Us & Free Growth Audit | ABC Digital Agency',
+  title: 'Contact Us & Free Growth Audit | Beez Digital Agency',
   description:
-    'Schedule a free 30-minute digital marketing strategy consultation with ABC Agency. Speak directly with senior growth architects. Zero sales pressure.',
+    'Schedule a free 30-minute digital marketing strategy consultation with Beez Digital. Speak directly with senior growth architects. Zero sales pressure.',
   keywords: [
     'contact digital marketing agency',
     'free SEO audit',
     'hire digital marketing agency',
     'PPC consultation',
     'marketing agency contact phone email',
-    'ABC agency headquarters',
+    'Beez Digital agency headquarters',
   ].join(', '),
   alternates: {
     canonical: 'https://landing2025.bhathiya.dev/contact',
   },
   openGraph: {
-    title: 'Contact Us & Free Growth Audit | ABC Digital Agency',
+    title: 'Contact Us & Free Growth Audit | Beez Digital Agency',
     description:
-      'Book a confidential 30-minute growth consultation with ABC Agency. Speak directly with senior practitioners.',
+      'Book a confidential 30-minute growth consultation with Beez Digital. Speak directly with senior practitioners.',
     url: 'https://landing2025.bhathiya.dev/contact',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Contact ABC Digital Marketing Agency',
+        alt: 'Contact Beez Digital Marketing Agency',
       },
     ],
     locale: 'en_US',
@@ -40,11 +40,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact ABC Digital Marketing Agency',
+    title: 'Contact Beez Digital Marketing Agency',
     description:
-      'Connect with ABC Agency for a comprehensive growth audit and tailored marketing proposal.',
+      'Connect with Beez Digital for a comprehensive growth audit and tailored marketing proposal.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
+    creator: '@beez_digital',
   },
 };
 
@@ -71,13 +71,13 @@ export default function ContactPage() {
   const contactSchema = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Contact ABC Digital Marketing Agency',
-    description: 'Get in touch with ABC Agency for free consultations and client inquiries.',
+    name: 'Contact Beez Digital Marketing Agency',
+    description: 'Get in touch with Beez Digital for free consultations and client inquiries.',
     mainEntity: {
       '@type': 'LocalBusiness',
-      name: 'ABC Digital Marketing Agency',
+      name: 'Beez Digital Marketing Agency',
       telephone: '+1-555-123-4567',
-      email: 'hello@abc.com',
+      email: 'hello@beezdigital.com',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '123 Digital Street',

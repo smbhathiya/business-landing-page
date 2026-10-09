@@ -7,10 +7,11 @@ import PageHero from '../../components/PageHero';
 import PortfolioClient from './PortfolioClient';
 
 export const metadata: Metadata = {
-  title: 'Case Studies & Portfolio | Verified Client ROI | ABC Agency',
+  title: 'Case Studies & Portfolio | Verified Client ROI | Beez Digital',
   description:
-    'Explore verified case studies and performance data. See how ABC generated +420% organic traffic growth, 3.8x ROAS, and over $75M in client revenue.',
+    'Explore verified case studies and performance data. See how Beez Digital generated +420% organic traffic growth, 3.8x ROAS, and over $75M in client revenue.',
   keywords: [
+    'Beez Digital case studies',
     'digital marketing case studies',
     'SEO case study results',
     'PPC performance metrics',
@@ -22,17 +23,17 @@ export const metadata: Metadata = {
     canonical: 'https://landing2025.bhathiya.dev/portfolio',
   },
   openGraph: {
-    title: 'Case Studies & Portfolio | Verified Client ROI | ABC Agency',
+    title: 'Case Studies & Portfolio | Verified Client ROI | Beez Digital',
     description:
       'Verified performance results and client case studies: +420% organic traffic, 3.8x ROAS, and $75M+ client revenue generated.',
     url: 'https://landing2025.bhathiya.dev/portfolio',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ABC Agency Case Studies',
+        alt: 'Beez Digital Case Studies',
       },
     ],
     locale: 'en_US',
@@ -40,11 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Case Studies & Client ROI | ABC Agency',
+    title: 'Case Studies & Client ROI | Beez Digital',
     description:
-      'Explore verified performance case studies and client testimonials from ABC Digital Marketing Agency.',
+      'Explore verified performance case studies and client testimonials from Beez Digital Marketing Agency.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
+    creator: '@beezdigital',
   },
 };
 
@@ -71,11 +72,11 @@ export default function PortfolioPage() {
   const caseStudySchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'ABC Digital Marketing Case Studies',
+    name: 'Beez Digital Marketing Case Studies',
     description: 'Documented performance case studies and testimonials for SEO, PPC, and web development.',
     publisher: {
       '@type': 'Organization',
-      name: 'ABC Digital Marketing Agency',
+      name: 'Beez Digital Marketing Agency',
     },
   };
 

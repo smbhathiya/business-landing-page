@@ -10,7 +10,7 @@ const fullTeam = [
     role: 'CEO & Founder',
     superpower: 'Enterprise Search Architecture',
     bio: '12+ years of enterprise marketing experience. Former Google Ads specialist overseeing $50M+ ARR growth architectures.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'sarah@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'sarah@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -18,7 +18,7 @@ const fullTeam = [
     role: 'Head of Technical SEO & AI',
     superpower: 'Programmatic Indexation & Semantic Graphs',
     bio: 'Data scientist and programmatic engineer specializing in enterprise crawls, semantic topic graphs, and indexation speed.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'michael@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'michael@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -26,7 +26,7 @@ const fullTeam = [
     role: 'Creative Director',
     superpower: 'High-Converting Visual Systems',
     bio: 'Award-winning creative director crafting visual storytelling, viral social formats, and UI/UX design systems.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'emily@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'emily@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -34,7 +34,7 @@ const fullTeam = [
     role: 'Lead Full-Stack Web Architect',
     superpower: 'Next.js 16 & Sub-Second Core Web Vitals',
     bio: 'Full-stack software engineer crafting ultra-fast web applications with 99+ PageSpeed scores and headless CRO integrations.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'david@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'david@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -42,7 +42,7 @@ const fullTeam = [
     role: 'Paid Acquisition Lead',
     superpower: 'Predictive Media Buying & ROAS Optimization',
     bio: 'Managing $20M+ in annual media spend across Google, Meta, and YouTube with strict focus on blended ROAS profitability.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'lisa@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'lisa@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -50,7 +50,7 @@ const fullTeam = [
     role: 'Content Strategy Director',
     superpower: 'Inbound Demand Generation',
     bio: 'Deep-funnel content ecosystem architect turning organic searchers into qualified enterprise pipeline and booked sales calls.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'alex@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'alex@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -58,7 +58,7 @@ const fullTeam = [
     role: 'Senior CRO & Experimentation Specialist',
     superpower: 'Multivariate Conversion Funnels',
     bio: 'Behavioral psychologist and CRO engineer running hundreds of micro-experiments to eliminate friction from checkout flows.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'jessica@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'jessica@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -66,7 +66,7 @@ const fullTeam = [
     role: 'Retention & Lifecycle Automation Lead',
     superpower: 'HubSpot & Klaviyo Dynamic Flows',
     bio: 'Architecting behavioral email and SMS nurture sequences that maximize customer lifetime value and drive repeat orders.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'marcus@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'marcus@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
 ];

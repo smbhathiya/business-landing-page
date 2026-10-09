@@ -10,7 +10,7 @@ const teamMembers = [
     role: 'CEO & Founder',
     expertise: 'Growth Architecture & Search Strategy',
     bio: '12+ years of enterprise growth experience. Former Google ads lead architecting systems for $50M+ ARR businesses.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'sarah@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'sarah@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -18,7 +18,7 @@ const teamMembers = [
     role: 'Head of Technical SEO & AI',
     expertise: 'Algorithmic Optimization & Core Web Vitals',
     bio: 'Data scientist and programmatic engineer specializing in enterprise crawls, semantic graphs, and indexation speed.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'michael@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'michael@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -26,7 +26,7 @@ const teamMembers = [
     role: 'Creative Director',
     expertise: 'Brand Identity & High-Converting UX',
     bio: 'Award-winning creative strategist crafting visual narratives and viral short-form media for top global brands.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'emily@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'emily@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -34,7 +34,7 @@ const teamMembers = [
     role: 'Lead Full-Stack Web Architect',
     expertise: 'Next.js, Edge Compute & Performance',
     bio: 'Full-stack software engineer crafting ultra-fast web applications with sub-second page loads and 100/100 Core Web Vitals.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'david@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'david@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -42,7 +42,7 @@ const teamMembers = [
     role: 'Paid Acquisition Lead',
     expertise: 'Performance Media & Multi-Touch Attribution',
     bio: 'Managing $20M+ in annual media spend across Google, Meta, and YouTube with strict focus on blended ROAS profitability.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'lisa@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'lisa@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
   {
@@ -50,7 +50,7 @@ const teamMembers = [
     role: 'Content Strategy Director',
     expertise: 'Inbound Demand Gen & Thought Leadership',
     bio: 'Specialist in deep-funnel content ecosystems that capture high-intent searches and convert organic readers into booked demos.',
-    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'alex@abc.com' },
+    social: { linkedin: 'https://linkedin.com', twitter: 'https://twitter.com', email: 'alex@beezdigital.com' },
     gradient: 'from-red-600 to-red-500',
   },
 ];

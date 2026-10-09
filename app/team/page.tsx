@@ -7,32 +7,33 @@ import PageHero from '../../components/PageHero';
 import TeamClient from './TeamClient';
 
 export const metadata: Metadata = {
-  title: 'Our Team & Leadership | Growth Engineers & Strategists | ABC Agency',
+  title: 'Our Team & Leadership | Growth Engineers & Strategists | Beez Digital',
   description:
-    'Meet the multidisciplinary team behind ABC Agency. Senior SEO architects, performance media buyers, Next.js developers, and creative directors driving client revenue.',
+    'Meet the multidisciplinary team behind Beez Digital. Senior SEO architects, performance media buyers, Next.js developers, and creative directors driving client revenue.',
   keywords: [
+    'Beez Digital team',
     'digital marketing agency team',
     'growth marketing leaders',
     'technical SEO specialists',
     'PPC media buyers',
     'Next.js web agency developers',
-    'ABC leadership team',
+    'Beez Digital leadership team',
   ].join(', '),
   alternates: {
     canonical: 'https://landing2025.bhathiya.dev/team',
   },
   openGraph: {
-    title: 'Our Team & Leadership | Growth Engineers & Strategists | ABC Agency',
+    title: 'Our Team & Leadership | Growth Engineers & Strategists | Beez Digital',
     description:
-      'Meet the elite practitioners driving measurable growth at ABC Digital Marketing Agency.',
+      'Meet the elite practitioners driving measurable growth at Beez Digital Marketing Agency.',
     url: 'https://landing2025.bhathiya.dev/team',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ABC Agency Leadership Team',
+        alt: 'Beez Digital Leadership Team',
       },
     ],
     locale: 'en_US',
@@ -40,11 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our Team & Leadership | ABC Agency',
+    title: 'Our Team & Leadership | Beez Digital',
     description:
-      'Meet the senior practitioners and growth architects at ABC Digital Marketing Agency.',
+      'Meet the senior practitioners and growth architects at Beez Digital Marketing Agency.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
+    creator: '@beezdigital',
   },
 };
 
@@ -71,7 +72,7 @@ export default function TeamPage() {
   const teamSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'ABC Digital Marketing Agency',
+    name: 'Beez Digital Marketing Agency',
     member: [
       {
         '@type': 'Person',

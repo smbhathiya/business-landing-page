@@ -7,10 +7,11 @@ import PageHero from '../../components/PageHero';
 import PricingClient from './PricingClient';
 
 export const metadata: Metadata = {
-  title: 'Transparent Pricing & Growth Plans | ABC Digital Agency',
+  title: 'Transparent Pricing & Growth Plans | Beez Digital',
   description:
     'Predictable, value-driven digital marketing pricing. Compare Starter, Growth Engine, and Enterprise Scale packages. Zero long-term lock-in contracts.',
   keywords: [
+    'Beez Digital pricing',
     'digital marketing agency pricing',
     'SEO agency cost',
     'PPC management fees',
@@ -22,17 +23,17 @@ export const metadata: Metadata = {
     canonical: 'https://landing2025.bhathiya.dev/pricing',
   },
   openGraph: {
-    title: 'Transparent Pricing & Growth Plans | ABC Digital Agency',
+    title: 'Transparent Pricing & Growth Plans | Beez Digital',
     description:
       'Predictable, performance-backed pricing plans. Compare our Starter, Growth Engine, and Enterprise packages.',
     url: 'https://landing2025.bhathiya.dev/pricing',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ABC Agency Pricing Plans',
+        alt: 'Beez Digital Pricing Plans',
       },
     ],
     locale: 'en_US',
@@ -40,11 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transparent Pricing & Growth Plans | ABC Agency',
+    title: 'Transparent Pricing & Growth Plans | Beez Digital',
     description:
       'Compare our predictable marketing retainer plans with zero hidden fees and documented ROI.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
+    creator: '@beezdigital',
   },
 };
 
@@ -71,7 +72,7 @@ export default function PricingPage() {
   const pricingSchema = {
     '@context': 'https://schema.org',
     '@type': 'OfferCatalog',
-    name: 'ABC Digital Marketing Growth Plans',
+    name: 'Beez Digital Marketing Growth Plans',
     itemListElement: [
       {
         '@type': 'Offer',

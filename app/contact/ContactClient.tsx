@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Direct Strategic Email',
-    details: ['hello@abc.com', 'partnerships@abc.com'],
+    details: ['hello@beezdigital.com', 'partnerships@beezdigital.com'],
     note: 'Inquiries answered in under 2 hours',
   },
   {

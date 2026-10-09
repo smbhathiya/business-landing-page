@@ -7,10 +7,11 @@ import PageHero from '../../components/PageHero';
 import ServicesClient from './ServicesClient';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services | SEO, PPC & Growth Strategy | ABC Agency',
+  title: 'Digital Marketing Services | SEO, PPC & Growth Strategy | Beez Digital',
   description:
     'Comprehensive digital marketing services engineered for revenue growth. Technical SEO, Google & Meta PPC campaigns, custom Next.js web development, content marketing, and marketing automation.',
   keywords: [
+    'Beez Digital',
     'digital marketing services',
     'enterprise SEO services',
     'PPC agency',
@@ -26,17 +27,17 @@ export const metadata: Metadata = {
     canonical: 'https://landing2025.bhathiya.dev/services',
   },
   openGraph: {
-    title: 'Digital Marketing Services | SEO, PPC & Growth Strategy | ABC Agency',
+    title: 'Digital Marketing Services | SEO, PPC & Growth Strategy | Beez Digital',
     description:
       'Engineered digital marketing services designed to scale revenue. Technical SEO, PPC media buying, content engines, and modern web applications.',
     url: 'https://landing2025.bhathiya.dev/services',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ABC Digital Marketing Services',
+        alt: 'Beez Digital Marketing Services',
       },
     ],
     locale: 'en_US',
@@ -44,11 +45,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Services | SEO, PPC & Growth Strategy | ABC Agency',
+    title: 'Digital Marketing Services | SEO, PPC & Growth Strategy | Beez Digital',
     description:
       'Engineered digital marketing services designed to scale revenue. Technical SEO, PPC media buying, and modern web applications.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
+    creator: '@beezdigital',
   },
 };
 
@@ -59,7 +60,7 @@ export default function ServicesPage() {
     serviceType: 'Digital Marketing Services',
     provider: {
       '@type': 'Organization',
-      name: 'ABC Digital Marketing Agency',
+      name: 'Beez Digital Marketing Agency',
       url: 'https://landing2025.bhathiya.dev',
     },
     areaServed: 'Worldwide',

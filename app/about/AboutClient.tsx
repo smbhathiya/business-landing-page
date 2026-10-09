@@ -100,7 +100,7 @@ export default function AboutClient() {
                 We believed businesses deserved something dramatically better: a multidisciplinary partner that combines the technical rigor of software engineers with the storytelling of world-class creatives.
               </p>
               <p>
-                Today, ABC manages over $50M in annual media spend and powers organic acquisition for both fast-growing startups and Fortune 500 enterprises across North America, Europe, and Asia-Pacific.
+                Today, Beez Digital manages over $50M in annual media spend and powers organic acquisition for both fast-growing startups and Fortune 500 enterprises across North America, Europe, and Asia-Pacific.
               </p>
             </div>
           </div>

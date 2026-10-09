@@ -1,19 +1,27 @@
 'use client';
 
-import React from 'react';
+import React, { useId } from 'react';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   showText?: boolean;
   className?: string;
+  glow?: boolean;
 }
 
-export default function Logo({ size = 'md', showText = true, className = '' }: LogoProps) {
+export default function Logo({
+  size = 'md',
+  showText = true,
+  className = '',
+  glow = true,
+}: LogoProps) {
+  const uid = useId().replace(/:/g, '');
+
   const iconSizes = {
-    sm: 32,
-    md: 42,
-    lg: 52,
-    xl: 68,
+    sm: 34,
+    md: 44,
+    lg: 54,
+    xl: 72,
   };
 
   const textSizes = {
@@ -32,106 +40,117 @@ export default function Logo({ size = 'md', showText = true, className = '' }: L
 
   const px = iconSizes[size];
 
+  const ids = {
+    grad: `beez-brand-grad-${uid}`,
+    core: `beez-brand-core-${uid}`,
+    shield: `beez-brand-shield-${uid}`,
+  };
+
   return (
-    <div className={`inline-flex items-center gap-3 ${className}`}>
-      {/* Custom Vector Hexagonal 'B' Monogram */}
+    <div className={`inline-flex items-center gap-3 group select-none ${className}`}>
+      {/* ── Minimalist Geometric Honeycomb 'B' Monogram ── */}
       <div
-        className="relative flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
+        className="relative flex items-center justify-center flex-shrink-0 transition-transform duration-300 ease-out group-hover:scale-105"
         style={{ width: px, height: px }}
       >
+        {/* Ambient Backlight Glow */}
+        {glow && (
+          <div
+            className="absolute inset-0 rounded-full blur-lg opacity-40 group-hover:opacity-75 transition-opacity duration-300 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.45) 0%, rgba(245, 158, 11, 0.2) 60%, transparent 80%)',
+            }}
+          />
+        )}
+
         <svg
           viewBox="0 0 100 100"
           width={px}
           height={px}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="filter drop-shadow-[0_4px_16px_rgba(239,68,68,0.35)]"
+          className="relative z-10 filter drop-shadow-[0_4px_16px_rgba(239,68,68,0.35)] transition-all duration-300 group-hover:drop-shadow-[0_6px_22px_rgba(239,68,68,0.55)]"
         >
           <defs>
-            {/* Primary Crimson-Red Gradient */}
-            <linearGradient id="beezGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            {/* Primary Crimson-Amber Brand Gradient */}
+            <linearGradient id={ids.grad} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#ff4d4d" />
-              <stop offset="45%" stopColor="#ef4444" />
-              <stop offset="100%" stopColor="#991b1b" />
-            </linearGradient>
-
-            {/* Amber-Gold Highlight for the "Bee" identity */}
-            <linearGradient id="beezAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#fbbf24" />
+              <stop offset="50%" stopColor="#ef4444" />
               <stop offset="100%" stopColor="#f59e0b" />
             </linearGradient>
 
-            {/* Background Shield Gradient */}
-            <linearGradient id="beezBg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1f1414" />
-              <stop offset="100%" stopColor="#0d0808" />
+            {/* Glowing Golden Energy Core Gradient */}
+            <radialGradient id={ids.core} cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#ffffff" />
+              <stop offset="45%" stopColor="#fbbf24" />
+              <stop offset="100%" stopColor="#ef4444" />
+            </radialGradient>
+
+            {/* Shield Subtle Rim Gradient */}
+            <linearGradient id={ids.shield} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#ef4444" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="#f59e0b" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#ef4444" stopOpacity="0.8" />
             </linearGradient>
           </defs>
 
           {/* Hexagon Outer Badge */}
           <polygon
-            points="50,4 90,26 90,74 50,96 10,74 10,26"
-            fill="url(#beezBg)"
-            stroke="url(#beezGradient)"
+            points="50,5 90,27 90,73 50,95 10,73 10,27"
+            fill="#0c060a"
+            stroke={`url(#${ids.shield})`}
             strokeWidth="3.5"
             strokeLinejoin="round"
           />
 
-          {/* Inner Geometric Honeycomb Rings */}
-          <polygon
-            points="50,13 81,31 81,69 50,87 19,69 19,31"
-            fill="none"
-            stroke="rgba(239, 68, 68, 0.2)"
-            strokeWidth="1.5"
+          {/* Minimalist Bold 'B' Monogram */}
+          {/* Vertical Spine */}
+          <rect x="27" y="24" width="10" height="52" rx="3.5" fill={`url(#${ids.grad})`} />
+
+          {/* Upper Loop */}
+          <path
+            d="M34 24 H56 C65 24 71 29 71 38 C71 46 65 50 56 50 H34 Z"
+            fill={`url(#${ids.grad})`}
+          />
+          <path
+            d="M39 31 H54 C58 31 61 34 61 38 C61 42 58 44 54 44 H39 Z"
+            fill="#0c060a"
           />
 
-          {/* Stylized Modern 'B' with Wing Cutouts */}
-          {/* Vertical stem */}
-          <rect x="33" y="27" width="8" height="46" rx="4" fill="url(#beezGradient)" />
-
-          {/* Upper B Loop / Wing */}
+          {/* Lower Loop */}
           <path
-            d="M38 27 H56 C64 27 69 32 69 38 C69 44 64 48 56 48 H38 V27 Z"
-            fill="url(#beezGradient)"
+            d="M34 50 H59 C69 50 75 55 75 63 C75 72 69 76 59 76 H34 Z"
+            fill={`url(#${ids.grad})`}
           />
-          {/* Upper inner counter */}
           <path
-            d="M42 33 H54 C58 33 61 35 61 38 C61 41 58 43 54 43 H42 V33 Z"
-            fill="#120b0b"
+            d="M39 56 H56 C60 56 64 59 64 63 C64 67 60 70 56 70 H39 Z"
+            fill="#0c060a"
           />
 
-          {/* Lower B Loop / Wing */}
-          <path
-            d="M38 48 H60 C68 48 73 53 73 60 C73 67 68 73 60 73 H38 V48 Z"
-            fill="url(#beezGradient)"
-          />
-          {/* Lower inner counter */}
-          <path
-            d="M42 53 H56 C61 53 64 56 64 60 C64 64 61 67 56 67 H42 V53 Z"
-            fill="#120b0b"
-          />
-
-          {/* Dynamic Golden Energy Node / Stinger Accent */}
-          <circle cx="72" cy="28" r="3.5" fill="url(#beezAccent)" />
-          <circle cx="72" cy="28" r="6" stroke="url(#beezAccent)" strokeWidth="1" opacity="0.6" />
+          {/* Radiant Apex Gold Spark */}
+          <circle cx="75" cy="24" r="4.5" fill={`url(#${ids.core})`} />
+          <circle cx="75" cy="24" r="7" stroke="#fbbf24" strokeWidth="0.8" opacity="0.6" />
         </svg>
       </div>
 
-      {/* Brand Typography */}
+      {/* ── Brand Wordmark Typography ── */}
       {showText && (
         <div className="flex flex-col text-left">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 leading-none">
             <span
-              className={`${textSizes[size]} font-black tracking-tight gradient-text font-poppins leading-none`}
+              className={`${textSizes[size]} font-black tracking-tight bg-gradient-to-r from-red-500 via-rose-500 to-amber-400 bg-clip-text text-transparent font-poppins`}
             >
               Beez
             </span>
-            <span className={`${textSizes[size]} font-bold text-white font-poppins leading-none`}>
+            <span
+              className={`${textSizes[size]} font-bold text-white font-poppins transition-colors group-hover:text-red-100`}
+            >
               Digital
             </span>
           </div>
           <span
-            className={`${subTextSizes[size]} tracking-[0.22em] uppercase font-bold text-gray-400 mt-1`}
+            className={`${subTextSizes[size]} tracking-[0.22em] uppercase font-semibold text-gray-400 group-hover:text-red-300 transition-colors mt-1`}
           >
             Growth Architecture
           </span>
