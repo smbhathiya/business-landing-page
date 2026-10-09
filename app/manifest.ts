@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'ABC Digital Marketing Agency',
-    short_name: 'ABC Digital',
-    description: 'Transform your business with ABC\'s cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.',
+    name: 'Beez Digital Marketing Agency',
+    short_name: 'Beez Digital',
+    description: 'Transform your business with Beez Digital\'s cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

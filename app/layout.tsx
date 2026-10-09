@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
+import PageLoader from "../components/PageLoader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,9 +16,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "ABC - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
-  description: "Transform your business with ABC's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation. Get measurable results and grow your business today.",
+  title: "Beez Digital - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
+  description: "Transform your business with Beez Digital's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation. Get measurable results and grow your business today.",
   keywords: [
+    "Beez Digital",
     "digital marketing agency",
     "SEO services",
     "PPC advertising",
@@ -57,16 +59,16 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "ABC - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
-    description: "Transform your business with ABC's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation. Get measurable results and grow your business today.",
+    title: "Beez Digital - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
+    description: "Transform your business with Beez Digital's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation. Get measurable results and grow your business today.",
     url: "https://landing2025.bhathiya.dev",
-    siteName: "ABC Digital Marketing Agency",
+    siteName: "Beez Digital Marketing Agency",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ABC Digital Marketing Agency - Transform Your Business",
+        alt: "Beez Digital Marketing Agency - Transform Your Business",
       },
     ],
     locale: "en_US",
@@ -74,11 +76,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ABC - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
-    description: "Transform your business with ABC's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.",
+    title: "Beez Digital - Digital Marketing Agency | SEO, PPC, Social Media Marketing",
+    description: "Transform your business with Beez Digital's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.",
     images: ["/twitter-image.jpg"],
-    creator: "@abc_digital",
-    site: "@abc_digital",
+    creator: "@beezdigital",
+    site: "@beezdigital",
   },
   robots: {
     index: true,
@@ -109,6 +111,7 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
+          <PageLoader />
           {children}
         </ThemeProvider>
       </body>

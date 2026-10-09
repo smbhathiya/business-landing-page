@@ -13,10 +13,11 @@ import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 
 export const metadata: Metadata = {
-  title: 'ABC Digital Marketing Agency | Enterprise SEO, PPC & Growth Engineering',
+  title: 'Beez Digital Marketing Agency | Enterprise SEO, PPC & Growth Engineering',
   description:
-    'Scale your business with ABC Digital Marketing Agency. We engineer high-velocity growth architectures: Technical SEO, Google & Meta Ads, Next.js web applications, and marketing automation.',
+    'Scale your business with Beez Digital Marketing Agency. We engineer high-velocity growth architectures: Technical SEO, Google & Meta Ads, Next.js web applications, and marketing automation.',
   keywords: [
+    'Beez Digital',
     'digital marketing agency',
     'enterprise SEO services',
     'PPC advertising agency',
@@ -28,23 +29,23 @@ export const metadata: Metadata = {
     'marketing automation consultant',
     'performance marketing',
   ].join(', '),
-  authors: [{ name: 'ABC Digital Agency' }],
+  authors: [{ name: 'Beez Digital Agency' }],
   metadataBase: new URL('https://landing2025.bhathiya.dev'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'ABC Digital Marketing Agency | Enterprise SEO, PPC & Growth Engineering',
+    title: 'Beez Digital Marketing Agency | Enterprise SEO, PPC & Growth Engineering',
     description:
-      'Transform your customer acquisition with ABC. We build full-funnel search, paid acquisition, and headless web platforms delivering documented revenue.',
+      'Transform your customer acquisition with Beez Digital. We build full-funnel search, paid acquisition, and headless web platforms delivering documented revenue.',
     url: 'https://landing2025.bhathiya.dev',
-    siteName: 'ABC Digital Marketing Agency',
+    siteName: 'Beez Digital Marketing Agency',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ABC Digital Marketing Agency - Enterprise Growth Architecture',
+        alt: 'Beez Digital Marketing Agency - Enterprise Growth Architecture',
       },
     ],
     locale: 'en_US',
@@ -52,12 +53,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ABC Digital Marketing Agency | Growth Engineering',
+    title: 'Beez Digital Marketing Agency | Growth Engineering',
     description:
       'Scale your business with algorithmic SEO, paid media buying, and modern Next.js web development.',
     images: ['/twitter-image.jpg'],
-    creator: '@abc_digital',
-    site: '@abc_digital',
+    creator: '@beezdigital',
+    site: '@beezdigital',
   },
 };
 
@@ -66,11 +67,11 @@ export default function Home() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'ABC Digital Marketing Agency',
+    name: 'Beez Digital Marketing Agency',
     url: 'https://landing2025.bhathiya.dev',
     logo: 'https://landing2025.bhathiya.dev/logo.png',
     description:
-      "Transform your business with ABC's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.",
+      "Transform your business with Beez Digital's cutting-edge digital marketing solutions. We specialize in SEO optimization, PPC advertising, social media marketing, content strategy, web design, and marketing automation.",
     address: {
       '@type': 'PostalAddress',
       streetAddress: '123 Digital Street',
@@ -83,13 +84,13 @@ export default function Home() {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
       contactType: 'customer service',
-      email: 'hello@abc.com',
+      email: 'hello@beezdigital.com',
     },
     sameAs: [
-      'https://www.facebook.com/abcdigital',
-      'https://www.twitter.com/abc_digital',
-      'https://www.linkedin.com/company/abc-digital',
-      'https://www.instagram.com/abc_digital',
+      'https://www.facebook.com/beezdigital',
+      'https://www.twitter.com/beezdigital',
+      'https://www.linkedin.com/company/beezdigital',
+      'https://www.instagram.com/beezdigital',
     ],
   };
 
@@ -97,7 +98,7 @@ export default function Home() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'ABC Digital Marketing Agency',
+    name: 'Beez Digital Marketing Agency',
     url: 'https://landing2025.bhathiya.dev',
     potentialAction: {
       '@type': 'SearchAction',

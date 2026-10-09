@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
 
+import Logo from './Logo';
+
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
@@ -55,21 +57,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center h-20 justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group flex-shrink-0" aria-label="ABC Home">
+          <Link href="/" className="flex items-center gap-2 group flex-shrink-0" aria-label="Beez Digital Home">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2.5"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-500 flex items-center justify-center shadow-lg shadow-red-600/30 group-hover:shadow-red-500/50 transition-all">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight gradient-text font-poppins">ABC</span>
-                <span className="text-[10px] tracking-widest uppercase font-semibold text-gray-400 -mt-1">
-                  Digital Agency
-                </span>
-              </div>
+              <Logo size="md" />
             </motion.div>
           </Link>
 

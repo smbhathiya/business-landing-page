@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight, Sparkles } from 'lucide-react';
+import Logo from './Logo';
 
 const footerNav = {
   services: [
@@ -50,16 +51,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Info & Newsletter */}
           <div className="lg:col-span-2 space-y-6">
-            <Link href="/" className="inline-flex items-center gap-2.5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-500 flex items-center justify-center shadow-lg shadow-red-600/30">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight gradient-text font-poppins">ABC</span>
-                <span className="text-[10px] tracking-widest uppercase font-semibold text-gray-400 -mt-1">
-                  Digital Agency
-                </span>
-              </div>
+            <Link href="/" className="inline-flex items-center gap-2.5 group" aria-label="Beez Digital Home">
+              <Logo size="md" />
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
@@ -70,7 +63,7 @@ export default function Footer() {
             <div className="space-y-3 pt-2">
               <div className="flex items-center text-gray-400 text-sm gap-3">
                 <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
-                <a href="mailto:hello@abc.com" className="hover:text-white transition-colors">hello@abc.com</a>
+                <a href="mailto:hello@beezdigital.com" className="hover:text-white transition-colors">hello@beezdigital.com</a>
               </div>
               <div className="flex items-center text-gray-400 text-sm gap-3">
                 <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
@@ -156,7 +149,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs">
-            &copy; {currentYear} ABC Digital Marketing Agency. All rights reserved.
+            &copy; {currentYear} Beez Digital Agency. All rights reserved.
           </p>
 
           <div className="flex items-center space-x-3">
