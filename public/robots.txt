@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://landing2025.bhathiya.dev/
+Host: https://landing2025.bhathiya.dev
 
 # Sitemaps
 Sitemap: https://landing2025.bhathiya.dev/sitemap.xml
